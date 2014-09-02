@@ -8,7 +8,7 @@ use URI::QueryParam;
 use Carp;
 use Moo;
 use namespace::clean;
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 $Net::DNS::Lite::CACHE = Cache::LRU->new( size => 512 );
 
@@ -16,7 +16,7 @@ has 'api_key' => (
     is => 'rw',
     isa => sub { $_[0] },
     required => 1,
-    default => $ENV{BANDCAMP_API_KEY},
+    default => sub { $ENV{BANDCAMP_API_KEY} },
 );
 
 has 'http' => (

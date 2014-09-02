@@ -7,7 +7,7 @@ build_requires:
 configure_requires:
   Module::Build::Tiny: '0.035'
 dynamic_config: 0
-generated_by: 'Minilla/v2.1.1, CPAN::Meta::Converter version 2.141520'
+generated_by: 'Minilla/v2.1.1, CPAN::Meta::Converter version 2.142060'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,7 +26,7 @@ no_index:
 provides:
   WebService::Bandcamp:
     file: lib/WebService/Bandcamp.pm
-    version: '0.02'
+    version: '0.03'
 requires:
   Cache::LRU: '0'
   Carp: '0'
@@ -42,4 +42,4 @@ resources:
   bugtracker: https://github.com/hondallica/p5-WebService-Bandcamp/issues
   homepage: https://github.com/hondallica/p5-WebService-Bandcamp
   repository: https://github.com/hondallica/p5-WebService-Bandcamp.git
-version: '0.02'
+version: '0.03'
