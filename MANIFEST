@@ -7,10 +7,5 @@ cpanfile
 lib/WebService/Bandcamp.pm
 minil.toml
 t/00_compile.t
-t/01_api_key.t
-t/02_band.t
-t/03_album.t
-t/04_track.t
-t/05_url.t
 META.yml
 MANIFEST

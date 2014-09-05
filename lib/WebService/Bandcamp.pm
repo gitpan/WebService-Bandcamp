@@ -8,7 +8,8 @@ use URI::QueryParam;
 use Carp;
 use Moo;
 use namespace::clean;
-our $VERSION = "0.03";
+our $VERSION = "0.04";
+use Data::Dumper;
 
 $Net::DNS::Lite::CACHE = Cache::LRU->new( size => 512 );
 
@@ -80,7 +81,7 @@ sub _make_request {
     );
 
     my $data = decode_json( $content );
-
+    warn Dumper $data;
     if ( defined $data->{error} ) {
         my $code = $data->{error};
         my $message = $data->{message};
