@@ -63,7 +63,7 @@
    "provides" : {
       "WebService::Bandcamp" : {
          "file" : "lib/WebService/Bandcamp.pm",
-         "version" : "0.04"
+         "version" : "0.05"
       }
    },
    "release_status" : "stable",
@@ -77,5 +77,5 @@
          "web" : "https://github.com/hondallica/p5-WebService-Bandcamp"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
