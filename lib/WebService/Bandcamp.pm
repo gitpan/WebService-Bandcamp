@@ -8,7 +8,7 @@ use URI::QueryParam;
 use Carp;
 use Moo;
 use namespace::clean;
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 
 $Net::DNS::Lite::CACHE = Cache::LRU->new( size => 512 );
@@ -26,7 +26,7 @@ has 'http' => (
     default  => sub {
         my $http = Furl::HTTP->new(
             inet_aton => \&Net::DNS::Lite::inet_aton,
-            agent => 'WebService::Bandcamp' . $VERSION,
+            agent => 'WebService::Bandcamp/' . $VERSION,
             headers => [ 'Accept-Encoding' => 'gzip',],
         );
         $http->env_proxy;
@@ -81,7 +81,6 @@ sub _make_request {
     );
 
     my $data = decode_json( $content );
-    warn Dumper $data;
     if ( defined $data->{error} ) {
         my $code = $data->{error};
         my $message = $data->{message};
